@@ -1,0 +1,8 @@
+<p><b>
+  Rain
+  </b>
+</p>
+<div class="rain-total">{{rainTotal | number:'1.2-2'}} <span *ngIf="rainTotal">mm</span></div>
+<div *ngFor="let rain of rainfall">
+  {{rain.date | date:'longDate'}} {{rain.date | date:'mediumTime'}}
+</div>
