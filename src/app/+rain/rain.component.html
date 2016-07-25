@@ -1,8 +1,10 @@
 <p><b>
-  Rain
+  Total Rain
   </b>
 </p>
-<div class="rain-total">{{rainTotal | number:'1.2-2'}} <span *ngIf="rainTotal">mm</span></div>
-<div *ngFor="let rain of rainfall">
+<div class="rain-total">{{rainTotal | number:'1.0-1'}}<span *ngIf="rainTotal">mm</span> 
+<span style="font-size:0.7em;border-left:1px solid white;padding-left:0.5em;">{{rainTotal * 3.94 | number:'1.0-0'}}<span *ngIf="rainTotal">pts</span></span></div>
+<br>
+<div *ngFor="let rain of rainfall" style="font-size:0.9em;opacity:0.8;">
   {{rain.date | date:'longDate'}} {{rain.date | date:'mediumTime'}}
 </div>
